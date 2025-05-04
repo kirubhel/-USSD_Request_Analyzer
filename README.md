@@ -6,6 +6,7 @@
 ![Golang](https://img.shields.io/badge/backend-Go-00ADD8?logo=go)
 ![Tailwind CSS](https://img.shields.io/badge/styling-TailwindCSS-38b2ac?logo=tailwindcss)
 ![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-336791?logo=postgresql)
+![RabbitMQ](https://img.shields.io/badge/messaging-RabbitMQ-FF6600?logo=rabbitmq)
 
 ---
 
@@ -106,6 +107,7 @@ backend/
 ├── cmd/main.go
 ├── internal/
 │   ├── infra/postgres/
+│   ├── infra/rabbitmq/
 │   ├── handlers/
 │   └── models/
 
