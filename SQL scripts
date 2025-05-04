@@ -16,6 +16,15 @@ CREATE TABLE ussd_responses (
   timestamp TIMESTAMP
 );
 
+
+CREATE TABLE blacklist_events_log (
+	id SERIAL PRIMARY KEY,
+	msisdn TEXT,
+	reason TEXT,
+	source TEXT,
+	event_time TIMESTAMP DEFAULT now()
+);
+
 -- Suggested Extension for Blacklisting
 CREATE TABLE blacklist (
   msisdn TEXT PRIMARY KEY,
