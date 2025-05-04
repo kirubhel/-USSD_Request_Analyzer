@@ -35,10 +35,10 @@ View and filter the most recent USSD requests and their corresponding responses 
 [![Demo Video Screenshot](./screenshots/dashboard-overview.png)](https://drive.google.com/file/d/1zY8-AKkcdo3pOJWUJIQPUAm3z_cB2HbR/view?usp=sharing)
 
 
-### 🧭 Dashboard Overview  
+### 📊 Chart Summary  
 ![Chart Summary](./screenshots/dashboard-overview.png)
 
-### 📊 Chart Summary  
+### 📝 Latest Requests  
 ![Latest Request](./screenshots/latestRequests.png)
 
 ### 📝 Blacklisting   
