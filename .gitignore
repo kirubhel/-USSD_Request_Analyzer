@@ -1,0 +1,47 @@
+# === React + Vite frontend ===
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# === Go backend ===
+backend/bin/
+backend/build/
+backend/dist/
+backend/out/
+backend/coverage/
+backend/*.exe
+backend/*.test
+backend/*.out
+backend/*.log
+backend/go.sum
+# backend/go.mod # Uncomment if you don't want it tracked
+backend/*.o
+backend/*.a
+backend/*.so
+backend/vendor/
+
+# === Shared ===
+*.log
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+Thumbs.db
+
+# === Editor & OS ===
+.vscode/
+.idea/
+*.swp
+# .gitignore
+*.mov
+*.gif
+*.mp4
+*.zip
+*.mov
+*.gif
+*.mp4

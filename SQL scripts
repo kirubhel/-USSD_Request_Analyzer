@@ -1,0 +1,46 @@
+-- Original Tables
+CREATE TABLE ussd_requests (
+  id SERIAL PRIMARY KEY,
+  correlation_id TEXT,
+  operation TEXT,
+  request_data TEXT,
+  timestamp TIMESTAMP
+);
+
+CREATE TABLE ussd_responses (
+  id SERIAL PRIMARY KEY,
+  correlation_id TEXT,
+  operation TEXT,
+  status TEXT,
+  reply TEXT,
+  timestamp TIMESTAMP
+);
+
+-- Suggested Extension for Blacklisting
+CREATE TABLE blacklist (
+  msisdn TEXT PRIMARY KEY,
+  reason TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- View: Success vs Failure
+CREATE VIEW request_summary AS
+SELECT
+  r.status,
+  COUNT(*) as count
+FROM ussd_responses r
+GROUP BY r.status;
+
+-- View: Latest Joined Entries
+CREATE VIEW latest_requests AS
+SELECT
+  req.correlation_id,
+  req.timestamp as request_time,
+  res.timestamp as response_time,
+  req.operation,
+  res.status,
+  res.reply,
+  req.request_data
+FROM ussd_requests req
+JOIN ussd_responses res ON req.correlation_id = res.correlation_id
+ORDER BY req.timestamp DESC;
